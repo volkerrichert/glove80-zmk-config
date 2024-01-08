@@ -27,16 +27,18 @@
 #define LAYER_Factory 3
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
+
 #ifndef LAYER_Lower
+
 #define LAYER_Lower 0
-#endif
 
-/* Custom Device-tree */
+#
 
+endif {
+    /* Custom Device-tree */
+    /* Glove80 system behavior & macros */
 
-/* Glove80 system behavior & macros */
-
-/ {
+    /
 
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
@@ -219,7 +221,7 @@
 &trans                &none         &none           &none           &none            &kp HOME                                                   &none             &kp KP_NUM            &kp KP_EQUAL           &kp KP_SLASH       &kp KP_MULTIPLY  &kp PRINTSCREEN
 &trans                &none         &none           &kp UP_ARROW    &none            &kp END                                                    &none             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_N9          &kp KP_MINUS     &kp SCROLLLOCK
 &trans                &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                  &kp LEFT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RIGHT_BRACKET  &kp KP_PLUS      &none
-&trans                &kp K_APP     &none           &kp F11         &kp F12          &kp PG_DN  &trans  &trans  &to 0   &trans  &trans  &trans  &kp COMMA         &kp DOT               &kp SEMICOLON          &kp COLON          &kp KP_ENTER     &trans
+&trans                &kp K_APP     &none           &kp F11         &kp F12          &kp PG_DN  &trans  &trans  &to 0   &trans  &trans  &trans  &kp KP_COMMA      &kp KP_DOT            &kp SEMICOLON          &kp COLON          &kp KP_ENTER     &trans
 &magic LAYER_Magic 0  &kp CAPS      &kp INS         &kp F11         &kp F12                     &trans  &trans  &trans  &trans  &trans  &trans                    &kp KP_N0             &kp KP_N0              &kp KP_DOT         &kp KP_ENTER     &trans
             >;
         };
